@@ -1,6 +1,10 @@
 import { api } from "./client";
-import { Vendor } from "./types/vendor";
+import { Vendor } from "@/lib/types/vendor";
 
-export function fetchVendors() {
-  return api<Vendor[]>("/vendors");
-}
+export const fetchVendors = async (): Promise<Vendor[]> => {
+  return api<Vendor[]>("/vendors/");
+};
+
+export const fetchVendor = (id: string) =>
+  api(`/vendors/${id}`);
+

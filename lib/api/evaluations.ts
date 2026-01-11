@@ -1,2 +1,4 @@
-export async function triggerEvaluation(): Promise<void> {}
+import { api } from "./client";
 
+export const fetchAuditLogs = () =>
+  api("/audit");

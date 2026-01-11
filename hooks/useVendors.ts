@@ -1,5 +1,6 @@
+// hooks/useVendors.ts
 import { useEffect, useState } from "react";
-import { fetchVendors } from "@/lib/vendors";
+import { fetchVendors } from "@/lib/api/vendors";
 import { Vendor } from "@/lib/types/vendor";
 
 export function useVendors() {
@@ -8,9 +9,11 @@ export function useVendors() {
 
   useEffect(() => {
     fetchVendors()
-      .then(setVendors)
+      .then((data) => {
+        setVendors(data ?? []);
+      })
       .finally(() => setLoading(false));
   }, []);
 
-  return { vendors, loading };
+  return { vendors, loading }; // ← return object
 }

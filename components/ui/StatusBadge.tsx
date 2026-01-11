@@ -1,6 +1,18 @@
+// components/ui/StatusBadge.tsx
 export function StatusBadge({ status }: { status: string }) {
+  const normalized = status.toLowerCase();
   const color =
-    status === "high" ? "bg-red-100" : status === "medium" ? "bg-yellow-100" : "bg-green-100";
+    normalized === "active"
+      ? "bg-green-100 text-green-800"
+      : normalized === "inactive"
+      ? "bg-gray-100 text-gray-800"
+      : "bg-yellow-100 text-yellow-800";
 
-  return <span className={`px-2 py-1 rounded text-xs ${color}`}>{status}</span>;
+  return (
+    <span
+      className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${color}`}
+    >
+      {status.charAt(0).toUpperCase() + status.slice(1).toLowerCase()}
+    </span>
+  );
 }
