@@ -1,8 +1,9 @@
 import { api } from "./client";
 
 export type Escalation = {
+  id: string;  
   vendor_id: string;
-  state: any;
+  status: string;
   created_at: string;
 };
 

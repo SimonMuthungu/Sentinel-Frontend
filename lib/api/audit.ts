@@ -6,6 +6,7 @@ export type AuditLog = {
   decision: string;
   confidence: number;
   created_at: string;
+  action: string;
 };
 
 export const fetchAuditLogs = () =>
