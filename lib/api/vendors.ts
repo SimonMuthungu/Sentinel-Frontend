@@ -25,3 +25,9 @@ export const uploadVendorDoc = async (id: string, file: File) => {
   if (!res.ok) throw new Error("Upload failed");
   return res.json();
 };
+
+export const getVendorRuns = async (vendorId: string) => {
+  const res = await fetch(`${API_BASE}/vendors/${vendorId}/reports`);
+  if (!res.ok) throw new Error("Failed to fetch vendor reports");
+  return res.json();
+};
