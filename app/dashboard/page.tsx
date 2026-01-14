@@ -18,7 +18,7 @@ export default function DashboardPage() {
   return (
     <div className="grid grid-cols-3 gap-6">
       <Card title="Vendors">{summary.total_vendors}</Card>
-      <Card title="Escalations">{summary.active_escalations}</Card>
+      <Card title="Escalations (Human Review Required)">{summary.active_escalations}</Card>
       <Card title="Risk Events">{summary.recent_risk_events}</Card>
     </div>
   );

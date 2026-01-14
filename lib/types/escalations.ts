@@ -1,6 +1,4 @@
-import { api } from "./client";
-
-export type Escalation = {
+export interface Escalation {
   id: string;
   vendor_id?: string;
   run_id?: string;
@@ -12,6 +10,3 @@ export type Escalation = {
   policy_violations?: any; // refine if you know JSON shape
   status: string;
 }
-
-export const fetchEscalations = () =>
-  api<Escalation[]>("/escalations");
