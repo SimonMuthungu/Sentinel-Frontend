@@ -26,7 +26,7 @@ export default function VendorReportsPage({ params }: { params: { vendorId: stri
 
   return (
     <div className="p-6 space-y-6">
-      <h2 className="text-2xl font-bold">Reports for Vendor {params.vendorId}</h2>
+      <h2 className="text-2xl font-bold">Executive Report for Vendor {params.vendorId}</h2>
 
       {runs.length === 0 && (
         <p className="text-gray-500">No reports available yet.</p>
