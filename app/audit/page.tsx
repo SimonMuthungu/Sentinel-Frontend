@@ -27,7 +27,7 @@ export default function AuditPage() {
             <tr key={a.id} className="hover:bg-gray-50">
               <td className="px-4 py-2 border">{a.id}</td>
               <td className="px-4 py-2 border">{a.vendor_id}</td>
-              <td className="px-4 py-2 border">{a.trigger}</td>
+              {/* <td className="px-4 py-2 border">{a.trigger}</td> */}
               <td className="px-4 py-2 border">{a.decision}</td>
               <td className="px-4 py-2 border">{a.confidence}</td>
               <td className="px-4 py-2 border">
